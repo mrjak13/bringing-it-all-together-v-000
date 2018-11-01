@@ -24,8 +24,8 @@ class Dog
   end
 
   def save
+    binding.pry
     new_dog = Dog.new(name, breed)
-
 
   end
 
