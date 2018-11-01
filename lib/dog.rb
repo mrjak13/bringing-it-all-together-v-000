@@ -45,7 +45,7 @@ class Dog
     SELECT * FROM dogs WHERE id = ?
     SQL
 
-    DB[:conn].execute(sql, id)
+    DB[:conn].execute(sql, id).map {|dog| name: => dog[1], breed: => dog[2], id: => dog[0] }
 
 
     binding.pry
