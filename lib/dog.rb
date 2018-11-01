@@ -47,7 +47,7 @@ class Dog
 
     value = DB[:conn].execute(sql, id)[0]
     hash = {id: value[0], name: value[1], breed: value[2]}
-    binding.pry
+    # binding.pry
     self.new(id: value[0], name: value[1], breed: value[2])
 
 
