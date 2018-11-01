@@ -45,7 +45,8 @@ class Dog
     SELECT * FROM dogs WHERE id = ?
     SQL
 
-    DB[:conn].execute(sql, id).map {|dog| :name => dog[1], :breed => dog[2], :id => dog[0] }
+    value = DB[:conn].execute(sql, id)[0]
+    hash = {id: value[0], name: value[1], id: value[2] }
 
 
     binding.pry
