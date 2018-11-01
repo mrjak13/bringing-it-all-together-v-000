@@ -24,7 +24,7 @@ class Dog
   end
 
   def save
-    new_dog = Dog.new(name:, breed:)
+    new_dog = Dog.new(name: breed:)
 
 
   end
